@@ -1,0 +1,83 @@
+/* VARIABLES */
+$background: #070707;
+$textColor: #e0e0e0;
+$lighterGrey: #676767;
+$Grey: #4b4b4b;
+$darkGrey: #1b1b1b;
+
+/* MIXINS */
+@mixin centerContent() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GENERAL */
+body {
+    background-color: $background;
+    color: $textColor;
+}
+
+.App {
+    @include centerContent();
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+/* EDITOR */
+#editor-container {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin: 0;
+        padding: 1rem;
+        text-align: left;
+        background-color: $darkGrey;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #editor {
+        background-color: $lighterGrey;
+        color: #e0e0e0;
+        font-weight: 600;
+        border: none;
+        height: 400px;
+        width: 600px;
+        padding: 1rem;
+        outline: none;
+        border-bottom: 5px solid #e0e0e0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+/* PREVIEW */
+#preview-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    #preview-heading {
+        margin: 0;
+        padding: 1rem;
+        text-align: left;
+        background-color: $darkGrey;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+    }
+
+    #preview {
+
+        padding: 1rem;
+        width: 600px;
+        margin-bottom: 1rem;
+        background-color: $Grey;
+        border-bottom: 3px solid #e0e0e0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+}
